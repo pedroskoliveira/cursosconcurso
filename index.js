@@ -1,3 +1,4 @@
+
 // Carrega as variáveis de ambiente do arquivo .env
 require('dotenv').config();
 
@@ -12,6 +13,7 @@ const adminRoutes = require('./routes/adminRoutes.js');
 const subjectRoutes = require('./routes/subjectRoutes.js');
 const deckRoutes = require('./routes/deckRoutes.js');
 const flashcardRoutes = require('./routes/flashcardRoutes.js');
+const mercadopagoRoutes = require('./routes/mercadopagoRoutes.js');
 
 // Cria a aplicação Express
 const app = express();
@@ -30,6 +32,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/decks', deckRoutes);
 app.use('/api/flashcards', flashcardRoutes);
+app.use('/api/mercadopago', mercadopagoRoutes);
 
 // Uma rota de "saúde" para verificar rapidamente se o servidor está no ar
 app.get('/', (req, res) => {
